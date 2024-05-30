@@ -1,171 +1,171 @@
 {
-	"number_sequence": {
-		"feature_id": 1,
-		"feature_name": "Number Sequence",
-		"user_friendly_feature_name": "Number Sequence",
-		"unique_name": "number_sequence",
-		"available_default": true,
-		"feature_description": "Number Sequence Description Dummy String Zort",
-		"disabled": false,
-		"feature_option_groups": [
-			{
-				"option_group_id": 1,
-				"option_group_name": "Single Zero",
-				"options": [
-					{
-						"option_id": 1,
-						"option_name": "Classic Primrose",
-						"user_friendly_option_name": "Classic Primrose",
-						"full_summary_name": "Classic Primrose Numbers (Single Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/SingleZero/singleClassicPrimRose.jpg",
-						"disabled": false
-					},
-					{
-						"option_id": 2,
-						"option_name": "Geometric White",
-						"user_friendly_option_name": "Geometric White",
-						"full_summary_name": "Geometric White Numbers (Single Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/SingleZero/singleGeometricWhite.jpg",
-						"disabled": false
-					},
+  "number_sequence": {
+    "feature_id": 1,
+    "feature_name": "Number Sequence",
+    "user_friendly_feature_name": "Number Sequence",
+    "unique_name": "number_sequence",
+    "available_default": true,
+    "feature_description": "Number Sequence Description Dummy String Zort",
+    "disabled": false,
+    "feature_option_groups": [
+      {
+        "option_group_id": 1,
+        "option_group_name": "Single Zero",
+        "options": [
+          {
+            "option_id": 1,
+            "option_name": "Classic Primrose",
+            "user_friendly_option_name": "Classic Primrose",
+            "full_summary_name": "Classic Primrose Numbers (Single Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/SingleZero/singleClassicPrimRose.jpg",
+            "disabled": false
+          },
+          {
+            "option_id": 2,
+            "option_name": "Geometric White",
+            "user_friendly_option_name": "Geometric White",
+            "full_summary_name": "Geometric White Numbers (Single Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/SingleZero/singleGeometricWhite.jpg",
+            "disabled": false
+          },
 
-					{
-						"option_id": 3,
-						"option_name": "Clear White",
-						"user_friendly_option_name": "Clear White",
-						"full_summary_name": "Clear White Numbers (Single Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/SingleZero/singleClearWhite.jpg",
-						"disabled": false
-					},
+          {
+            "option_id": 3,
+            "option_name": "Clear White",
+            "user_friendly_option_name": "Clear White",
+            "full_summary_name": "Clear White Numbers (Single Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/SingleZero/singleClearWhite.jpg",
+            "disabled": true
+          },
 
-					{
-						"option_id": 4,
-						"option_name": "Classic Divide White",
-						"user_friendly_option_name": "Classic Divide White",
-						"full_summary_name": "Classic Divide White Numbers (Single Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/SingleZero/singleDividedWhite.jpg",
-						"disabled": false
-					}
-				]
-			},
-			{
-				"option_group_id": 2,
-				"option_group_name": "Double Zero",
-				"options": [
-					{
-						"option_id": 5,
-						"option_name": "Classic Primrose",
-						"user_friendly_option_name": "Classic Primrose",
-						"full_summary_name": "Classic Primrose Numbers (Double Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/DoubleZero/doubleClassicPrimRose.jpg",
-						"disabled": false
-					},
-					{
-						"option_id": 6,
-						"option_name": "Geometric White",
-						"user_friendly_option_name": "Geometric White",
-						"full_summary_name": "Geometric White Numbers (Double Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/DoubleZero/doubleClassicPrimRose.jpg",
-						"disabled": false
-					},
-					{
-						"option_id": 7,
-						"option_name": "Clear White",
-						"user_friendly_option_name": "Clear White",
-						"full_summary_name": "Clear White Numbers (Double Zero)",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/Numbers/DoubleZero/doubleClassicPrimRose.jpg",
-						"disabled": false
-					}
-				]
-			}
-		]
-	},
-	"separators": {
-		"feature_id": 2,
-		"feature_name": "Separators",
-		"user_friendly_feature_name": "Separators",
-		"unique_name": "separators",
-		"available_default": true,
-		"feature_description": "Separators Description Dummy String Zort",
-		"disabled": false,
-		"feature_option_groups": [
-			{
-				"option_group_id": 3,
-				"option_group_name": "Polished Aluminium",
-				"options": [
-					{
-						"option_id": 9,
-						"option_name": "Double-Radius",
-						"user_friendly_option_name": "Double-Radius",
-						"full_summary_name": "Double-Radius Separators",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/SeparatorRing/sepDrAli.jpg",
-						"disabled": false
-					},
-					{
-						"option_id": 10,
-						"option_name": "Scalloped",
-						"user_friendly_option_name": "Scalloped",
-						"full_summary_name": "Scalloped Separators",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/SeparatorRing/sepScallAli.jpg",
-						"disabled": false
-					}
-				]
-			},
-			{
-				"option_group_id": 4,
-				"option_group_name": "Brass",
-				"options": [
-					{
-						"option_id": 11,
-						"option_name": "Double-Radius",
-						"user_friendly_option_name": "Double-Radius",
-						"full_summary_name": "Double-Radius Separators in Brass",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/SeparatorRing/sepDrBrass.jpg",
-						"disabled": false
-					},
-					{
-						"option_id": 12,
-						"option_name": "Scalloped",
-						"user_friendly_option_name": "Scalloped",
-						"full_summary_name": "Scalloped Separators in Brass",
-						"thumbnail_size": "2x1",
-						"available_default": true,
-						"has_quantity_control": false,
-						"option_img": "/src/assets/SeparatorRing/sepScallBrass.jpg",
-						"disabled": false
-					}
-				]
-			}
-		]
-	}
+          {
+            "option_id": 4,
+            "option_name": "Classic Divide White",
+            "user_friendly_option_name": "Classic Divide White",
+            "full_summary_name": "Classic Divide White Numbers (Single Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/SingleZero/singleDividedWhite.jpg",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "option_group_id": 2,
+        "option_group_name": "Double Zero",
+        "options": [
+          {
+            "option_id": 5,
+            "option_name": "Classic Primrose",
+            "user_friendly_option_name": "Classic Primrose",
+            "full_summary_name": "Classic Primrose Numbers (Double Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/DoubleZero/doubleClassicPrimRose.jpg",
+            "disabled": false
+          },
+          {
+            "option_id": 6,
+            "option_name": "Geometric White",
+            "user_friendly_option_name": "Geometric White",
+            "full_summary_name": "Geometric White Numbers (Double Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/DoubleZero/doubleGeometricWhite.jpg",
+            "disabled": false
+          },
+          {
+            "option_id": 7,
+            "option_name": "Clear White",
+            "user_friendly_option_name": "Clear White",
+            "full_summary_name": "Clear White Numbers (Double Zero)",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/DoubleZero/doubleClearWhite.jpg",
+            "disabled": false
+          }
+        ]
+      }
+    ]
+  },
+  "separators": {
+    "feature_id": 2,
+    "feature_name": "Separators",
+    "user_friendly_feature_name": "Separators",
+    "unique_name": "separators",
+    "available_default": true,
+    "feature_description": "Separators Description Dummy String Zort",
+    "disabled": false,
+    "feature_option_groups": [
+      {
+        "option_group_id": 3,
+        "option_group_name": "Polished Aluminium",
+        "options": [
+          {
+            "option_id": 9,
+            "option_name": "Double-Radius",
+            "user_friendly_option_name": "Double-Radius",
+            "full_summary_name": "Double-Radius Separators",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/SeparatorRing/sepDrAli.jpg",
+            "disabled": false
+          },
+          {
+            "option_id": 10,
+            "option_name": "Scalloped",
+            "user_friendly_option_name": "Scalloped",
+            "full_summary_name": "Scalloped Separators",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/SeparatorRing/sepScallAli.jpg",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "option_group_id": 4,
+        "option_group_name": "Brass",
+        "options": [
+          {
+            "option_id": 11,
+            "option_name": "Double-Radius",
+            "user_friendly_option_name": "Double-Radius",
+            "full_summary_name": "Double-Radius Separators in Brass",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/SeparatorRing/sepDrBrass.jpg",
+            "disabled": false
+          },
+          {
+            "option_id": 12,
+            "option_name": "Scalloped",
+            "user_friendly_option_name": "Scalloped",
+            "full_summary_name": "Scalloped Separators in Brass",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/SeparatorRing/sepScallBrass.jpg",
+            "disabled": false
+          }
+        ]
+      }
+    ]
+  }
 }

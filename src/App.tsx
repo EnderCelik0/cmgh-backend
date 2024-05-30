@@ -1,5 +1,5 @@
 import Sidebar from './components/SideBar';
-import EditProduct from './pages/EditProduct';
+import EditProduct from './pages/Product';
 import EditRules from './pages/EditRules';
 import Settings from './pages/Settings';
 import { useAppContext } from './context/AppContext';
