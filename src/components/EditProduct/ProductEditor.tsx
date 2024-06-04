@@ -26,6 +26,7 @@ export default function ProductEditor() {
           labelText="Disabled"
           inputId="product-disabled"
           labelId="product-disabled"
+          defaultChecked={true}
         />
         <div className="flex gap-4">
           <Button className="rounded-md bg-[#cfcfcf] px-4 py-1 text-base text-black hover:border-black hover:bg-[#cfcfcf]/70 ">
@@ -59,12 +60,12 @@ export function CheckboxWithText({
   labelText,
   inputId,
   labelId,
-  checked,
+  defaultChecked,
 }: {
   labelText: string;
   inputId: string;
   labelId: string;
-  checked: boolean;
+  defaultChecked: boolean;
 }) {
   return (
     <div className="flex items-center space-x-2">
@@ -72,7 +73,7 @@ export function CheckboxWithText({
         className="text-accent-500 focus:ring-accent-500 peer h-6 w-6  border border-[#c3c3c3]"
         type="checkbox"
         id={inputId}
-        checked={checked}
+        defaultChecked={defaultChecked}
       />
 
       <label

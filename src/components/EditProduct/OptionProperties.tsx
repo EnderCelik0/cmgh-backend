@@ -54,13 +54,13 @@ export default function OptionProperties({ option }: OptionPropertiesProps) {
         <SelectWithLabel thumbnailSize={option.thumbnail_size} />
         <CheckboxWithText
           labelText="Available by Default"
-          checked={option.available_default}
+          defaultChecked={option.available_default}
           labelId="available-default-option"
           inputId="available-default-option"
         />
         <CheckboxWithText
           labelText="Has Quantity Control"
-          checked={option.has_quantity_control}
+          defaultChecked={option.has_quantity_control}
           labelId="quantity-control"
           inputId="quantity-control"
         />
@@ -68,7 +68,7 @@ export default function OptionProperties({ option }: OptionPropertiesProps) {
         <TextareaWithLabel imagePath={option.option_img} />
         <CheckboxWithText
           labelText="Disabled"
-          checked={option.disabled}
+          defaultChecked={option.disabled}
           labelId="option-disabled"
           inputId="option-disabled"
         />
@@ -91,7 +91,7 @@ function TextareaWithLabel({ imagePath }: { imagePath: string }) {
         className="min-h-10 border border-[#c3c3c3]"
         placeholder="Type your path here."
         id="path"
-        value={imagePath}
+        defaultValue={imagePath}
       />
     </div>
   );

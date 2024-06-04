@@ -1,0 +1,56 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "name": "Results Detection"
+    },
+    {
+      "id": 2,
+      "name": "Random Rotor Speed"
+    },
+    {
+      "id": 3,
+      "name": "Aurora"
+    },
+    {
+      "id": 4,
+      "name": "Halo"
+    },
+    {
+      "id": 5,
+      "name": "Number Sequence"
+    },
+    {
+      "id": 6,
+      "name": "Separators"
+    },
+    {
+      "id": 7,
+      "name": "Turret"
+    },
+    {
+      "id": 8,
+      "name": "Ball Stops"
+    },
+    {
+      "id": 9,
+      "name": "Centre Finish"
+    },
+    {
+      "id": 10,
+      "name": "Ball Track Finish"
+    },
+    {
+      "id": 11,
+      "name": "Top Rim Finish"
+    },
+    {
+      "id": 12,
+      "name": "Outer Bowl Finish"
+    },
+    {
+      "id": 9581,
+      "name": "CMGH - Veneers"
+    }
+  ]
+}

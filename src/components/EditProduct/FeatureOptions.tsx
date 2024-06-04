@@ -99,9 +99,11 @@ export default function FeatureOptions() {
         data.unique_name === "number_sequence" &&
         activeOption !== null && (
           <OptionProperties
-            option={data.feature_option_groups
-              .flatMap((group) => group.options)
-              .find((option) => option.option_id === activeOption) || {}}
+            option={
+              data.feature_option_groups
+                .flatMap((group) => group.options)
+                .find((option) => option.option_id === activeOption) || {}
+            }
           />
         )}
     </div>
