@@ -1,7 +1,13 @@
+import RuleProperties from "@/components/EditRule/RuleProperties";
+import Rules from "@/components/EditRule/Rules";
+
 export default function EditRules() {
-	return (
-		<div className='text-4xl font-medium flex justify-center items-center'>
-			<h1>Edit Rules</h1>
-		</div>
-	);
+  return (
+    <main className="flex gap-6 text-2xl">
+      <section className="flex flex-col gap-2">
+        <RuleProperties />
+        <Rules />
+      </section>
+    </main>
+  );
 }
