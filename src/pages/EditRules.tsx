@@ -1,13 +1,14 @@
 import RuleProperties from "@/components/EditRule/RuleProperties";
 import Rules from "@/components/EditRule/Rules";
+import Wrapper from "@/components/Wrapper";
 
 export default function EditRules() {
   return (
-    <main className="flex gap-6 text-2xl">
+    <Wrapper>
       <section className="flex flex-col gap-2">
         <RuleProperties />
         <Rules />
       </section>
-    </main>
+    </Wrapper>
   );
 }

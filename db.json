@@ -7,6 +7,7 @@
     "available_default": true,
     "feature_description": "Number Sequence Description Dummy String Zort",
     "disabled": false,
+
     "feature_option_groups": [
       {
         "option_group_id": 1,
@@ -91,7 +92,7 @@
             "option_name": "Clear White",
             "user_friendly_option_name": "Clear White",
             "full_summary_name": "Clear White Numbers (Double Zero)",
-            "thumbnail_size": "2x1",
+            "thumbnail_size": "1x1",
             "available_default": true,
             "has_quantity_control": false,
             "option_img": "/src/assets/Numbers/DoubleZero/doubleClearWhite.jpg",

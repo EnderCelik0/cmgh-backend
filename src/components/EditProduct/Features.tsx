@@ -14,6 +14,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { DialogClose } from "@radix-ui/react-dialog";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import { useAppContext } from "../../context/AppContext";
+import { Toaster } from "@/components/ui/sonner";
+import axios from "axios";
+import { toast } from "sonner";
 
 interface FeatureItem {
   id: number;
@@ -22,7 +26,7 @@ interface FeatureItem {
 }
 
 export default function Features() {
-  const [activeFeature, setActiveFeature] = useState<string | null>(null);
+  const { activeFeature, setActiveFeature } = useAppContext();
   const [features, setFeatures] = useState<FeatureItem[]>([]);
   const [initialFeatures, setInitialFeatures] = useState<FeatureItem[]>([]);
   const [isSaveDisabled, setIsSaveDisabled] = useState(true);
@@ -59,9 +63,9 @@ export default function Features() {
 
   const fetchFeatures = async () => {
     try {
-      const response = await fetch("http://localhost:4000/features");
-      if (response.ok) {
-        const data = await response.json();
+      const response = await axios.get("http://localhost:4000/features");
+      if (response.status === 200) {
+        const data = response.data;
         setFeatures(data);
         setInitialFeatures(data);
       } else {
@@ -71,6 +75,7 @@ export default function Features() {
       console.error("Error fetching features:", error);
     }
   };
+
   return (
     <div className="flex w-full flex-col rounded-md border-2 border-[#c3c3c3] p-2">
       <h3 className="mb-4 text-base">Product Features:</h3>
@@ -87,8 +92,8 @@ export default function Features() {
                 <Feature
                   key={item.id}
                   feature={item.name}
-                  isActive={activeFeature === item.name}
-                  onMouseDown={() => setActiveFeature(item.name)}
+                  isActive={activeFeature.name === item.name}
+                  onMouseDown={() => setActiveFeature(item)}
                 />
               </li>
             </Reorder.Item>
@@ -130,6 +135,7 @@ function Feature({
     </Button>
   );
 }
+
 export function AddFeatureDialog({
   onAddFeature,
 }: {
@@ -141,7 +147,7 @@ export function AddFeatureDialog({
   const handleSave = async () => {
     if (newFeature.name.trim() !== "" && newFeature.id !== 0) {
       try {
-        setLoading(true); // İsteğin başladığını belirtmek için loading durumunu true olarak ayarla
+        setLoading(true);
         const response = await fetch("http://localhost:4000/features", {
           method: "POST",
           headers: {
@@ -153,16 +159,39 @@ export function AddFeatureDialog({
           console.log("Feature added successfully!");
           setNewFeature({ name: "", id: 0 });
           onAddFeature();
+          toast("Feature added successfully!", {
+            action: {
+              label: "Close",
+              onClick: () => {},
+            },
+          });
         } else {
           console.error("Failed to add feature.");
+          toast("Failed to add feature.", {
+            action: {
+              label: "Close",
+              onClick: () => {},
+            },
+          });
         }
       } catch (error) {
         console.error("Error adding feature:", error);
+        toast("Failed to add feature.", {
+          action: {
+            label: "Close",
+            onClick: () => {},
+          },
+        });
       } finally {
         setLoading(false);
       }
     } else {
-      console.error("Feature name and ID are required.");
+      toast("Feature name and ID are required.", {
+        action: {
+          label: "Close",
+          onClick: () => {},
+        },
+      });
     }
   };
 
@@ -209,6 +238,7 @@ export function AddFeatureDialog({
             />
           </div>
         </div>
+
         <DialogFooter>
           {loading ? (
             <Button disabled>

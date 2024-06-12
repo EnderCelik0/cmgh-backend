@@ -21,13 +21,14 @@ interface Option {
   has_quantity_control: boolean;
   option_img: string;
   disabled: boolean;
+  option_group_id: number;
 }
 
 interface OptionPropertiesProps {
   option: Option;
 }
 
-export default function OptionProperties({ option }: OptionPropertiesProps) {
+const OptionProperties: React.FC<OptionPropertiesProps> = ({ option }) => {
   return (
     <div className="flex h-full flex-col justify-between rounded-md border-2 border-[#c3c3c3] p-3">
       <div className="flex flex-col gap-4">
@@ -46,31 +47,33 @@ export default function OptionProperties({ option }: OptionPropertiesProps) {
             value={option.full_summary_name}
           />
         </div>
-        <img
-          className="h-24 w-48 object-cover"
-          src={option.option_img}
-          alt="placeholder"
-        />
+        <div className="flex flex-col ">
+          <img
+            className="h-24 w-48 object-cover transition-all duration-200 ease-in-out"
+            src={option.option_img}
+            alt="placeholder"
+          />
+        </div>
         <SelectWithLabel thumbnailSize={option.thumbnail_size} />
         <CheckboxWithText
+          textSize="13px"
           labelText="Available by Default"
           defaultChecked={option.available_default}
-          labelId="available-default-option"
-          inputId="available-default-option"
+          id="available-default-option"
         />
         <CheckboxWithText
+          textSize="13px"
           labelText="Has Quantity Control"
           defaultChecked={option.has_quantity_control}
-          labelId="quantity-control"
-          inputId="quantity-control"
+          id="quantity-control"
         />
 
         <TextareaWithLabel imagePath={option.option_img} />
         <CheckboxWithText
+          textSize="13px"
           labelText="Disabled"
           defaultChecked={option.disabled}
-          labelId="option-disabled"
-          inputId="option-disabled"
+          id="option-disabled"
         />
       </div>
 
@@ -81,7 +84,9 @@ export default function OptionProperties({ option }: OptionPropertiesProps) {
       </div>
     </div>
   );
-}
+};
+
+export default OptionProperties;
 
 function TextareaWithLabel({ imagePath }: { imagePath: string }) {
   return (
@@ -91,7 +96,7 @@ function TextareaWithLabel({ imagePath }: { imagePath: string }) {
         className="min-h-10 border border-[#c3c3c3]"
         placeholder="Type your path here."
         id="path"
-        defaultValue={imagePath}
+        value={imagePath}
       />
     </div>
   );
@@ -103,7 +108,10 @@ function SelectWithLabel({ thumbnailSize }: { thumbnailSize: string }) {
       <h4 className="text-base">Thumbnail Size</h4>
       <Select>
         <SelectTrigger className="w-[180px] border border-[#c3c3c3]">
-          <SelectValue placeholder={thumbnailSize} />
+          <SelectValue
+            placeholder={thumbnailSize}
+            defaultValue={thumbnailSize || ""}
+          />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="1x1">1x1</SelectItem>

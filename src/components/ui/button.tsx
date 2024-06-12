@@ -7,9 +7,9 @@ const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-[#cecece] text-black  px-4 mt-3 hover:bg-slate-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
-      varitant: {
+      variant: {
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+          "bg-background text-destructive-foreground shadow-sm hover:bg-destructive/90",
       },
 
       size: {

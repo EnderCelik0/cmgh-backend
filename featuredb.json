@@ -1,56 +1,58 @@
 {
   "features": [
     {
-      "id": 1,
-      "name": "Results Detection"
-    },
-    {
-      "id": 2,
-      "name": "Random Rotor Speed"
-    },
-    {
-      "id": 3,
+      "id": "3",
       "name": "Aurora"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Halo"
     },
     {
-      "id": 5,
-      "name": "Number Sequence"
+      "id": "5",
+      "name": "Number Sequence",
+      "value": "number_sequence"
     },
     {
-      "id": 6,
-      "name": "Separators"
+      "id": "6",
+      "name": "Separators",
+      "value": "separators"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Turret"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Ball Stops"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Centre Finish"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Ball Track Finish"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Top Rim Finish"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Outer Bowl Finish"
     },
     {
-      "id": 9581,
-      "name": "CMGH - Veneers"
+      "id": "1234567",
+      "name": "cmgh feature"
+    },
+    {
+      "id": "3819",
+      "name": "cmgh new feature"
+    },
+    {
+      "id": 678668,
+      "name": "MahoganyCammegh"
     }
   ]
 }
