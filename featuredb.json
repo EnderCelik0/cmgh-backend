@@ -2,11 +2,8 @@
   "features": [
     {
       "id": "3",
-      "name": "Aurora"
-    },
-    {
-      "id": "4",
-      "name": "Halo"
+      "name": "Aurora",
+      "value": "aurora"
     },
     {
       "id": "5",
@@ -43,16 +40,16 @@
       "name": "Outer Bowl Finish"
     },
     {
-      "id": "1234567",
-      "name": "cmgh feature"
-    },
-    {
-      "id": "3819",
-      "name": "cmgh new feature"
-    },
-    {
-      "id": 678668,
+      "id": "678668",
       "name": "MahoganyCammegh"
+    },
+    {
+      "id": "94132",
+      "name": "New Dialog"
+    },
+    {
+      "id": 1351,
+      "name": "Halo"
     }
   ]
 }

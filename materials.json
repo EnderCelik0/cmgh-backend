@@ -503,6 +503,10 @@
       "normalMap": "normalMapIMG",
       "occlusionMap": "occlusionMapIMG",
       "emitionMap": "emitionMapIMG"
+    },
+    {
+      "id": "42341",
+      "name": "New Feature with the new dialog"
     }
   ]
 }

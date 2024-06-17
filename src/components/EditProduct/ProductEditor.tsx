@@ -21,8 +21,6 @@ export default function ProductEditor() {
     setProductName(e.target.value);
   };
 
-  console.log(productName);
-
   const deleteFeature = async () => {
     try {
       const response = await axios.delete(
@@ -86,6 +84,7 @@ export default function ProductEditor() {
 
       <div className="flex justify-between">
         <CheckboxWithText
+          textSize="13px"
           labelText="Disabled"
           id="product-disabled"
           defaultChecked={true}

@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
-  const [page, setPage] = useState("materials");
+  const [page, setPage] = useState("products");
   const [activeFeature, setActiveFeature] = useState({});
 
   const handlePage = (page) => {
