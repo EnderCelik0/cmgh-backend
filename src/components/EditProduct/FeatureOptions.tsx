@@ -93,6 +93,9 @@ export default function FeatureOptions() {
       targetGroup &&
       targetGroup.options.some((o) => o.option_id === option.option_id)
     ) {
+      console.log(
+        "Option with the same ID already exists in the target group, do nothing",
+      );
       toast.error(
         "Option with the same ID already exists in the target group.",
         {
@@ -102,6 +105,7 @@ export default function FeatureOptions() {
           },
         },
       );
+      return; // Return to prevent further execution
     }
 
     // Remove the option from all groups and no_group_options
@@ -208,13 +212,68 @@ export default function FeatureOptions() {
     setDraggingOver(null);
   };
 
+  const handleDeleteOption = async (optionId: number) => {
+    if (!data) return; // Ensure data is not null
+
+    // Remove the option from all groups and no_group_options
+    const updatedGroups = data.feature_option_groups.map((group) => ({
+      ...group,
+      options: group.options.filter((o) => o.option_id !== optionId),
+    }));
+
+    const updatedNoGroupOptions = data.no_group_options.filter(
+      (o) => o.option_id !== optionId,
+    );
+
+    const updatedData: FeatureData = {
+      ...data,
+      feature_option_groups: updatedGroups,
+      no_group_options: updatedNoGroupOptions,
+    };
+
+    setData(updatedData);
+
+    // Send the updated data to the server
+    try {
+      const response = await axios.put(
+        `http://localhost:3000/${activeFeature.value}`,
+        updatedData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+
+      if (response.status !== 200) {
+        throw new Error("Failed to delete the option.");
+      }
+
+      console.log("Option deleted successfully!");
+      toast("Option deleted successfully!", {
+        action: {
+          label: "Close",
+          onClick: () => {},
+        },
+      });
+    } catch (error) {
+      console.error("Error deleting option:", error);
+      toast("Failed to delete option.", {
+        action: {
+          label: "Close",
+          onClick: () => {},
+        },
+      });
+    }
+  };
+
   return (
     <div className="flex gap-7">
       <div className="flex h-full flex-col justify-between gap-6 rounded-md border-2 border-[#c3c3c3] p-2">
         {data?.feature_option_groups ? (
           <div>
             <h3 className="mb-4">Options for {activeFeature.name}</h3>
-            <div className="flex max-h-[760px] flex-col gap-8 overflow-auto overflow-x-hidden p-2 shadow-md">
+            <div className="flex max-h-[48rem] flex-col gap-8 overflow-auto overflow-x-hidden rounded-md p-2 shadow-lg">
               {data.feature_option_groups.map((group) => (
                 <div
                   key={group.option_group_id}
@@ -222,9 +281,22 @@ export default function FeatureOptions() {
                 >
                   <h3 className="px-1 text-base">{group.option_group_name}</h3>
                   <Reorder.Group
-                    axis="y"
+                    axis="x"
                     values={group.options}
-                    onReorder={setData}
+                    onReorder={(newOrder) => {
+                      setData((prevData) => {
+                        if (!prevData) return null;
+                        return {
+                          ...prevData,
+                          feature_option_groups:
+                            prevData.feature_option_groups.map((g) =>
+                              g.option_group_id === group.option_group_id
+                                ? { ...g, options: newOrder }
+                                : g,
+                            ),
+                        };
+                      });
+                    }}
                   >
                     <div
                       key={group.option_group_id}
@@ -232,7 +304,7 @@ export default function FeatureOptions() {
                       onDragOver={handleDragOver}
                       onDragEnter={() => handleDragEnter(group.option_group_id)}
                       onDragLeave={handleDragLeave}
-                      className={`grid grid-cols-[min-content_2fr] gap-6 border-2 border-[#70ad47] p-2 ${
+                      className={`grid grid-cols-[max-content_2fr] ${group.options.length > 1 || draggingOver === group.option_group_id ? "gap-2" : "gap-0"} rounded-md border-2 border-[#70ad47] p-2 ${
                         draggingOver === group.option_group_id
                           ? "rounded-md border-dashed"
                           : "border-solid "
@@ -251,11 +323,11 @@ export default function FeatureOptions() {
                             key={option.option_id}
                             draggable
                             onDragStart={(e) => handleDragStart(e, option)}
-                            className={`flex items-end justify-center break-words border border-transparent text-center text-lg font-medium ${
+                            className={`duration-400 flex items-end justify-center break-words rounded-md border border-transparent text-center text-lg font-medium transition-all ${
                               activeOption === option.option_id
                                 ? "bg-accent "
                                 : "bg-[#b7d6a3]"
-                            } duration-250 h-24 w-52 cursor-pointer pb-3 hover:border-black hover:bg-accent ${
+                            } duration-250 h-24 w-48 cursor-pointer pb-3 hover:border-black hover:bg-accent ${
                               false && "bg-destructive"
                             }`}
                             onClick={() => handleOptionClick(option.option_id)}
@@ -272,39 +344,57 @@ export default function FeatureOptions() {
                 <div className="flex flex-col gap-1">
                   <h3 className="px-1 text-base">No Group Options</h3>
                   <Reorder.Group
-                    axis={undefined}
+                    axis="x"
                     values={data.no_group_options}
-                    onReorder={setData}
+                    onReorder={(newOrder) => {
+                      setData((prevData) => {
+                        if (!prevData) return null;
+                        return {
+                          ...prevData,
+                          no_group_options: newOrder,
+                        };
+                      });
+                    }}
                   >
                     <div
                       onDrop={(e) => handleDrop(e, null)}
                       onDragOver={handleDragOver}
                       onDragEnter={() => handleDragEnter(null)}
                       onDragLeave={handleDragLeave}
-                      className={`relative grid h-auto grid-cols-[min-content_2fr] gap-6 border-2 border-destructive p-2 ${
+                      className={`relative grid h-auto grid-cols-[min-content_2fr] ${data.no_group_options.length > 1 ? "gap-4" : "gap-0"} border-2 border-destructive p-2  ${
                         draggingOver === null
                           ? "rounded-md border-dashed "
                           : "border-solid"
                       }`}
                     >
                       {data.no_group_options.map((option) => (
-                        <Reorder.Item key={option.option_id} value={option}>
+                        <Reorder.Item
+                          key={option.option_id}
+                          value={option}
+                          initial={{ height: "auto", opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {" "}
                           <div
                             key={option.option_id}
                             draggable
                             onDragStart={(e) => handleDragStart(e, option)}
-                            className={`flex items-end justify-center break-words border border-transparent text-center text-lg font-medium  ${
-                              activeOption === option.option_id
-                                ? "bg-accent "
-                                : "bg-[#b7d6a3]"
-                            } duration-250 } h-24 w-52 cursor-pointer bg-destructive  pb-3 transition-colors hover:border-black
-                  hover:bg-accent`}
+                            className={`flex items-end justify-center break-words rounded-md border border-transparent text-center text-lg font-medium   
+                              ${activeOption === option.option_id ? "bg-accent" : "bg-[#b7d6a3]"} duration-250 } h-24 w-48 cursor-pointer bg-destructive  pb-3 transition-colors hover:border-black hover:bg-accent`}
                             onClick={() => handleOptionClick(option.option_id)}
                           >
                             <span>{option.user_friendly_option_name}</span>
                           </div>
                         </Reorder.Item>
                       ))}
+                      {!draggingOver === null && (
+                        <div
+                          className={`duration-250 flex h-24 w-48  items-end justify-center break-words rounded-md border   
+                              border-transparent bg-destructive pb-3 text-center text-lg font-medium  opacity-40 transition-colors `}
+                        ></div>
+                      )}
                     </div>
                   </Reorder.Group>
                 </div>
@@ -347,6 +437,7 @@ export default function FeatureOptions() {
               option_group_id: -1,
             }
           }
+          onDelete={handleDeleteOption} // Pass the handleDeleteOption function
         />
       ) : (
         <FeatureProperties activeFeatureData={activeFeatureData} />

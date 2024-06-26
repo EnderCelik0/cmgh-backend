@@ -3,8 +3,14 @@ import React, { createContext, useContext, useState } from "react";
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
-  const [page, setPage] = useState("products");
+  const [page, setPage] = useState("demo");
   const [activeFeature, setActiveFeature] = useState({});
+  const [selectedItem, setSelectedItem] = useState({
+    id: 2,
+    name: "B",
+    color: "bg-blue-400",
+    number: 2,
+  });
 
   const handlePage = (page) => {
     setPage(page);
@@ -17,6 +23,8 @@ export function AppProvider({ children }) {
         handlePage,
         activeFeature,
         setActiveFeature,
+        selectedItem,
+        setSelectedItem,
       }}
     >
       {children}

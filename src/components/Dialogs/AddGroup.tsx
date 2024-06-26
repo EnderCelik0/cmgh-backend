@@ -15,6 +15,7 @@ import { Label } from "../ui/label";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
 import axios from "axios";
+import { OptionGroup } from "@/types/types";
 
 export function AddGroupDialog({
   featureName,
@@ -39,6 +40,22 @@ export function AddGroupDialog({
           throw new Error("Failed to fetch current feature data.");
         }
         const featureData = response.data;
+
+        // Check if a group with the same ID already exists
+        const groupExists = featureData.feature_option_groups.some(
+          (group: OptionGroup) => group.option_group_id === newGroup.id,
+        );
+
+        if (groupExists) {
+          toast.error("Group with the same ID already exists.", {
+            action: {
+              label: "Close",
+              onClick: () => {},
+            },
+          });
+          setLoading(false);
+          return;
+        }
 
         // Update the feature_option_groups array
         const updatedFeatureOptionGroups = [

@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckboxWithText } from "./ProductEditor";
 import { Button } from "../ui/button";
+// import { toast } from "sonner"; // Add this for notifications
 
 interface Option {
   option_id: number;
@@ -26,9 +27,13 @@ interface Option {
 
 interface OptionPropertiesProps {
   option: Option;
+  onDelete: (optionId: number) => void; // Add this prop
 }
 
-const OptionProperties: React.FC<OptionPropertiesProps> = ({ option }) => {
+const OptionProperties: React.FC<OptionPropertiesProps> = ({
+  option,
+  onDelete,
+}) => {
   return (
     <div className="flex h-full flex-col justify-between rounded-md border-2 border-[#c3c3c3] p-3">
       <div className="flex flex-col gap-4">
@@ -80,7 +85,7 @@ const OptionProperties: React.FC<OptionPropertiesProps> = ({ option }) => {
       <div className="flex w-full justify-end gap-4">
         <Button>Duplicate</Button>
         <Button>Save</Button>
-        <Button>Delete</Button>
+        <Button onClick={() => onDelete(option.option_id)}>Delete</Button>
       </div>
     </div>
   );

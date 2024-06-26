@@ -9,6 +9,17 @@
     "disabled": false,
     "no_group_options": [
       {
+        "option_id": 6,
+        "option_name": "Geometric White",
+        "user_friendly_option_name": "Geometric White",
+        "full_summary_name": "Geometric White number_sequence",
+        "thumbnail_size": "2x1",
+        "available_default": true,
+        "has_quantity_control": false,
+        "option_img": "",
+        "disabled": false
+      },
+      {
         "option_id": 10313131,
         "option_name": "numbercmgh",
         "user_friendly_option_name": "numbercmgh",
@@ -18,28 +29,6 @@
         "has_quantity_control": false,
         "option_img": "",
         "disabled": false
-      },
-      {
-        "option_id": 1,
-        "option_name": "Classic Primrose",
-        "user_friendly_option_name": "Classic Primrose",
-        "full_summary_name": "Classic Primrose Numbers (Single Zero)",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "/src/assets/Numbers/SingleZero/singleClassicPrimRose.jpg",
-        "disabled": false
-      },
-      {
-        "option_id": 3,
-        "option_name": "Clear White",
-        "user_friendly_option_name": "Clear White",
-        "full_summary_name": "Clear White Numbers (Single Zero)",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "/src/assets/Numbers/SingleZero/singleClearWhite.jpg",
-        "disabled": true
       }
     ],
     "feature_option_groups": [
@@ -48,14 +37,14 @@
         "option_group_name": "Single Zero",
         "options": [
           {
-            "option_id": 7,
-            "option_name": "Clear White",
-            "user_friendly_option_name": "Clear White",
-            "full_summary_name": "Clear White Numbers (Double Zero)",
-            "thumbnail_size": "1x1",
+            "option_id": 5,
+            "option_name": "Classic Primrose",
+            "user_friendly_option_name": "Classic Primrose",
+            "full_summary_name": "Classic Primrose Numbers (Double Zero)",
+            "thumbnail_size": "2x1",
             "available_default": true,
             "has_quantity_control": false,
-            "option_img": "/src/assets/Numbers/DoubleZero/doubleClearWhite.jpg",
+            "option_img": "/src/assets/Numbers/DoubleZero/doubleClassicPrimRose.jpg",
             "disabled": false
           },
           {
@@ -76,22 +65,16 @@
         "option_group_name": "Double Zero",
         "options": [
           {
-            "option_id": 5,
+            "option_id": 1,
             "option_name": "Classic Primrose",
             "user_friendly_option_name": "Classic Primrose",
-            "full_summary_name": "Classic Primrose Numbers (Double Zero)",
+            "full_summary_name": "Classic Primrose Numbers (Single Zero)",
             "thumbnail_size": "2x1",
             "available_default": true,
             "has_quantity_control": false,
-            "option_img": "/src/assets/Numbers/DoubleZero/doubleClassicPrimRose.jpg",
+            "option_img": "/src/assets/Numbers/SingleZero/singleClassicPrimRose.jpg",
             "disabled": false
-          }
-        ]
-      },
-      {
-        "option_group_id": 141,
-        "option_group_name": "GRUP-3",
-        "options": [
+          },
           {
             "option_id": 4,
             "option_name": "Classic Divide White",
@@ -102,16 +85,33 @@
             "has_quantity_control": false,
             "option_img": "/src/assets/Numbers/SingleZero/singleDividedWhite.jpg",
             "disabled": false
-          },
+          }
+        ]
+      },
+      {
+        "option_group_id": 141,
+        "option_group_name": "GRUP-3",
+        "options": [
           {
-            "option_id": 6,
-            "option_name": "Geometric White",
-            "user_friendly_option_name": "Geometric White",
-            "full_summary_name": "Geometric White number_sequence",
+            "option_id": 3,
+            "option_name": "Clear White",
+            "user_friendly_option_name": "Clear White",
+            "full_summary_name": "Clear White Numbers (Single Zero)",
             "thumbnail_size": "2x1",
             "available_default": true,
             "has_quantity_control": false,
-            "option_img": "",
+            "option_img": "/src/assets/Numbers/SingleZero/singleClearWhite.jpg",
+            "disabled": true
+          },
+          {
+            "option_id": 7,
+            "option_name": "Clear White",
+            "user_friendly_option_name": "Clear White",
+            "full_summary_name": "Clear White Numbers (Double Zero)",
+            "thumbnail_size": "1x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/Numbers/DoubleZero/doubleClearWhite.jpg",
             "disabled": false
           }
         ]
@@ -126,110 +126,43 @@
     "available_default": true,
     "feature_description": "Separators Description Dummy String Zort",
     "disabled": false,
-    "no_group_options": [
-      {
-        "option_id": 2,
-        "option_name": "Scalloped",
-        "user_friendly_option_name": "Scalloped",
-        "full_summary_name": "Scalloped Separators",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "/src/assets/SeparatorRing/sepScallAli.jpg",
-        "disabled": false
-      },
-      {
-        "option_id": 123123123123123,
-        "option_name": "SeparatorNoOptions",
-        "user_friendly_option_name": "SeparatorNoOptions",
-        "full_summary_name": "SeparatorNoOptions separators",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "",
-        "disabled": false
-      },
-      {
-        "option_id": 18301,
-        "option_name": "zortgine123",
-        "user_friendly_option_name": "zortgine123",
-        "full_summary_name": "zortgine123 separators",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "",
-        "disabled": false
-      },
-      {
-        "option_id": 11,
-        "option_name": "Double-Radius",
-        "user_friendly_option_name": "Double-Radius",
-        "full_summary_name": "Double-Radius Separators in Brass",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "/src/assets/SeparatorRing/sepDrBrass.jpg",
-        "disabled": false
-      },
-      {
-        "option_id": 3131,
-        "option_name": "sssssss",
-        "user_friendly_option_name": "sssssss",
-        "full_summary_name": "sssssss Separators",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "",
-        "disabled": false
-      }
-    ],
+    "no_group_options": [],
     "feature_option_groups": [
       {
         "option_group_id": 3,
         "option_group_name": "Polished Aluminium",
         "options": [
           {
-            "option_id": 9,
-            "option_name": "Double-Radius",
-            "user_friendly_option_name": "Double-Radius",
-            "full_summary_name": "Double-Radius Separators",
+            "option_id": 2,
+            "option_name": "Scalloped",
+            "user_friendly_option_name": "Scalloped",
+            "full_summary_name": "Scalloped Separators",
             "thumbnail_size": "2x1",
             "available_default": true,
             "has_quantity_control": false,
-            "option_img": "/src/assets/SeparatorRing/sepDrAli.jpg",
+            "option_img": "/src/assets/SeparatorRing/sepScallAli.jpg",
             "disabled": false
           },
           {
-            "option_id": 4342,
-            "option_name": "MahoganyCammegh",
-            "user_friendly_option_name": "MahoganyCammegh",
-            "full_summary_name": "MahoganyCammegh Separators",
+            "option_id": 10,
+            "option_name": "Scalloped",
+            "user_friendly_option_name": "Scalloped",
+            "full_summary_name": "Scalloped Separators",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/SeparatorRing/sepScallAli.jpg",
+            "disabled": false
+          },
+          {
+            "option_id": 3131,
+            "option_name": "sssssss",
+            "user_friendly_option_name": "sssssss",
+            "full_summary_name": "sssssss Separators",
             "thumbnail_size": "2x1",
             "available_default": true,
             "has_quantity_control": false,
             "option_img": "",
-            "disabled": false
-          },
-          {
-            "option_id": 4342,
-            "option_name": "MahoganyCammegh",
-            "user_friendly_option_name": "MahoganyCammegh",
-            "full_summary_name": "MahoganyCammegh Separators",
-            "thumbnail_size": "2x1",
-            "available_default": true,
-            "has_quantity_control": false,
-            "option_img": "",
-            "disabled": false
-          },
-          {
-            "option_id": 1,
-            "option_name": "Double-Radius",
-            "user_friendly_option_name": "Double-Radius",
-            "full_summary_name": "Double-Radius Separators",
-            "thumbnail_size": "2x1",
-            "available_default": true,
-            "has_quantity_control": false,
-            "option_img": "/src/assets/SeparatorRing/sepDrAli.jpg",
             "disabled": false
           },
           {
@@ -248,24 +181,57 @@
       {
         "option_group_id": 4,
         "option_group_name": "Brass",
-        "options": [
-          {
-            "option_id": 10,
-            "option_name": "Scalloped",
-            "user_friendly_option_name": "Scalloped",
-            "full_summary_name": "Scalloped Separators",
-            "thumbnail_size": "2x1",
-            "available_default": true,
-            "has_quantity_control": false,
-            "option_img": "/src/assets/SeparatorRing/sepScallAli.jpg",
-            "disabled": false
-          }
-        ]
+        "options": []
       },
       {
         "option_group_id": 1413,
         "option_group_name": "RandomGroupName",
-        "options": []
+        "options": [
+          {
+            "option_id": 4342,
+            "option_name": "MahoganyCammegh",
+            "user_friendly_option_name": "MahoganyCammegh",
+            "full_summary_name": "MahoganyCammegh Separators",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "",
+            "disabled": false
+          },
+          {
+            "option_id": 18301,
+            "option_name": "zortgine123",
+            "user_friendly_option_name": "zortgine123",
+            "full_summary_name": "zortgine123 separators",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "",
+            "disabled": false
+          },
+          {
+            "option_id": 123123123123123,
+            "option_name": "SeparatorNoOptions",
+            "user_friendly_option_name": "SeparatorNoOptions",
+            "full_summary_name": "SeparatorNoOptions separators",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "",
+            "disabled": false
+          },
+          {
+            "option_id": 1,
+            "option_name": "Double-Radius",
+            "user_friendly_option_name": "Double-Radius",
+            "full_summary_name": "Double-Radius Separators in Brass",
+            "thumbnail_size": "2x1",
+            "available_default": true,
+            "has_quantity_control": false,
+            "option_img": "/src/assets/SeparatorRing/sepDrBrass.jpg",
+            "disabled": false
+          }
+        ]
       }
     ]
   },
@@ -277,40 +243,32 @@
     "available_default": false,
     "feature_description": "Aurora Description Dummy String Zort",
     "disabled": false,
-    "no_group_options": [
-      {
-        "option_id": 413,
-        "option_name": "OPTION2",
-        "user_friendly_option_name": "OPTION2",
-        "full_summary_name": "OPTION2 aurora",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "",
-        "disabled": false
-      },
-      {
-        "option_id": 87645,
-        "option_name": "Grup-2",
-        "user_friendly_option_name": "Grup-2",
-        "full_summary_name": "Grup-2 aurora",
-        "thumbnail_size": "2x1",
-        "available_default": true,
-        "has_quantity_control": false,
-        "option_img": "",
-        "disabled": false
-      }
-    ],
+    "no_group_options": [],
     "feature_option_groups": [
       {
         "option_group_id": 12,
         "option_group_name": "Grup-1",
+        "options": []
+      },
+      {
+        "option_group_id": 8183,
+        "option_group_name": "Grup-2",
+        "options": []
+      },
+      {
+        "option_group_id": 2,
+        "option_group_name": "Grup-2",
+        "options": []
+      },
+      {
+        "option_group_id": 1,
+        "option_group_name": "1",
         "options": [
           {
-            "option_id": 13001,
-            "option_name": "OPTION1",
-            "user_friendly_option_name": "OPTION1",
-            "full_summary_name": "OPTION1 aurora",
+            "option_id": 12313,
+            "option_name": "14",
+            "user_friendly_option_name": "14",
+            "full_summary_name": "14 aurora",
             "thumbnail_size": "2x1",
             "available_default": true,
             "has_quantity_control": false,
@@ -318,11 +276,6 @@
             "disabled": false
           }
         ]
-      },
-      {
-        "option_group_id": 8183,
-        "option_group_name": "Grup-2",
-        "options": []
       }
     ]
   }

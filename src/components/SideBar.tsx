@@ -5,7 +5,7 @@ export default function Sidebar() {
   const { page, handlePage } = useAppContext();
 
   return (
-    <aside className="bg-slate-750  flex h-full w-48 flex-col  border-r-[1px] p-3 shadow-black shadow-sm "> 
+    <aside className="bg-slate-750 flex h-full w-48 flex-col border-r-[1px] p-3 shadow-sm shadow-black">
       <section>
         <Button
           className={`mb-4 block w-full p-2 text-left hover:bg-accent  ${
@@ -34,6 +34,16 @@ export default function Sidebar() {
           onClick={() => handlePage("materials")}
         >
           Edit Materials
+        </Button>
+      </section>
+      <section>
+        <Button
+          className={`mb-4 block w-full p-2 text-left hover:bg-accent ${
+            page === "demo" && "bg-accent"
+          }`}
+          onClick={() => handlePage("demo")}
+        >
+          Rule Demo
         </Button>
       </section>
       <section className="mt-auto">

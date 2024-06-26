@@ -15,6 +15,7 @@ import { Label } from "../ui/label";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
 import axios from "axios";
+import { Option, OptionGroup } from "@/types/types";
 
 export function AddOptionDialog({
   featureName,
@@ -39,6 +40,28 @@ export function AddOptionDialog({
           throw new Error("Failed to fetch current feature data.");
         }
         const featureData = response.data;
+
+        // Check if an option with the same ID already exists
+        const optionExists =
+          featureData.no_group_options.some(
+            (option: Option) => option.option_id === newOption.id,
+          ) ||
+          featureData.feature_option_groups.some((group: OptionGroup) =>
+            group.options.some(
+              (option: Option) => option.option_id === newOption.id,
+            ),
+          );
+
+        if (optionExists) {
+          toast.error("Option with the same ID already exists.", {
+            action: {
+              label: "Close",
+              onClick: () => {},
+            },
+          });
+          setLoading(false);
+          return;
+        }
 
         // Update the no_group_options array
         const updatedNoGroupOptions = [

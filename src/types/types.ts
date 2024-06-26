@@ -28,3 +28,25 @@ export interface FeatureData {
   feature_option_groups: OptionGroup[];
   no_group_options: Option[];
 }
+
+export interface Rule {
+  event: {
+    type: string;
+    disable: string;
+    disable_all: boolean;
+  };
+  conditions: {
+    params: {
+      selectedName: string;
+      selectedColor: string;
+      selectedNumber: number;
+    };
+  };
+}
+
+export type SelectedItem = {
+  id: number;
+  name: string;
+  color: string;
+  number: number;
+};

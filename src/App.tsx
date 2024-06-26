@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 import EditMaterials from "./pages/EditMaterials";
 import { useAppContext } from "./context/AppContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Demo from "./pages/Demo";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,8 @@ const App = () => {
         return <EditMaterials />;
       case "settings":
         return <Settings />;
+      case "demo":
+        return <Demo />;
       default:
         return null;
     }
@@ -29,9 +32,11 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className=" flex h-dvh gap-10 bg-slate-100">
+      <div className=" flex h-dvh gap-7 bg-slate-100 ">
         <Sidebar />
-        <div className="bg-slate-100 py-2">{renderSelectedComponent()}</div>
+        <div className="grow bg-slate-100 py-2">
+          {renderSelectedComponent()}
+        </div>
         <Toaster />
       </div>
     </QueryClientProvider>

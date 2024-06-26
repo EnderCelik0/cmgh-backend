@@ -1,0 +1,16 @@
+{
+  "rule": {
+    "event": {
+      "type": "disable",
+      "disable": "B",
+      "disable_all": true
+    },
+    "conditions": {
+      "params": {
+        "selectedName": "A",
+        "selectedColor": "bg-green-400",
+        "selectedNumber": 1
+      }
+    }
+  }
+}

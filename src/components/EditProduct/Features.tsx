@@ -37,7 +37,7 @@ export default function Features() {
   const saveFeatures = async () => {
     try {
       await axios.put(
-        "http://localhost:4000/data/features",
+        "http://localhost:4000/features",
         { features },
         {
           headers: {
